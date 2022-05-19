@@ -1,0 +1,14 @@
+{% extends "back/base.html.twig" %}
+
+
+{% block title %}Edit Presentation{% endblock %}
+
+{% block body %}
+    <h1>Edit Presentation</h1>
+
+    {{ include('back/presentation/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('presentation_index') }}">back to list</a>
+
+    {{ include('back/presentation/_delete_form.html.twig') }}
+{% endblock %}
