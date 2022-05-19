@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Non autorisé{% endblock %}
+
+{% block body %}
+<div class="main exception">
+<p  class="error_number">403</p>
+<h1>Vous n'avez pas les autorisations</h1>
+<p>La page recherchée n'a pas été trouvée.</p>
+<a href="{{ path('home') }}" class="btn btn-purple">Retourner à l'accueil </a>
+</div>
+{% endblock %}

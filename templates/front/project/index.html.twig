@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet{% endblock %}
+
+{% block body %}
+
+<div class="main">
+
+
+    <h1 class="project title_page">Projet</h1>
+
+    <div class="project container">
+        <div class="project project_name">
+        <h2 class="project_name">{{ project.name }}</h2>
+        </div>
+        
+        <div class="project section">
+            <div class="project_image">
+            <img class="project_image_img" src="{{  asset(project.image)  }}" alt="">
+            </div>
+
+            <div class="project_summary text">
+                <p class="summary_text">{{ project.summary }}</p>
+            </div>
+
+            <div class="project_description text">
+                <p class="description_text">{{ project.description }}</p>
+            </div>
+        </div>
+
+        <div class="project_links">
+            <div>
+                <a href="{{ project.url }}">Lien
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+            <div>
+                <a href="{{ project.github }}"> Lien GitHub
+                <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div>
+        <a href="{{ path('home') }}">Retour à l'accueil</a>
+        </div>
+    
+    </div>
+
+</div>
+
+{% endblock %}
