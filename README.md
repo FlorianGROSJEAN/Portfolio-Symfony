@@ -1,7 +1,7 @@
 # Portfolio-Symfony
 
 
-![resultat](assets/images/Portfolio2.PNG)
+![Screenshot](assets/images/Portfolio2.PNG)
 
 Création d'un portfolio pour me présenter.
 
@@ -9,7 +9,7 @@ Développé avec Symfony en 5.4, avec CSS personnalisé et JavaScript pour l'ani
 
 Pages 404 et 403 personnalisées.
 
-![resultat](assets/images/CaptureBack.PNG)
+![Screenshot](assets/images/CaptureBack.PNG)
 
 Backoffice pour modifier ou ajouter des informations.
 
