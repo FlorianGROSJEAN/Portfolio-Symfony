@@ -15,16 +15,8 @@ const app = {
 
         // Récupération du bouton "skills"
         let skillsElement = document.querySelector(".skills");
-        skillsElement.addEventListener("click", app.handleClickSkills);
-
+        skillsElement.addEventListener("click", app.handleClickSkills);    
         
-        let openBtn = document.getElementById("openBtn");
-        let closeBtn = document.getElementById("closeBtn");
-
-        openBtn.addEventListener("click", app.openNav);
-        closeBtn.addEventListener("click", app.closeNav)  ;      
-        
-
     },
 
     // fonction pour enlever la surbrillance du bouton sélectionné
@@ -89,7 +81,7 @@ const app = {
         sidenav.classList.add("active");
     },
       
-      /* Set the width of the side navigation to 0 */
+
     closeNav : function(evt) {
         let sidenav = document.getElementById("mySidenav");
         sidenav.classList.remove("active");
@@ -97,24 +89,6 @@ const app = {
 
 };
 
-
-// Affichage de la barre de navigation
-// var sidenav = document.getElementById("mySidenav");
-// var openBtn = document.getElementById("openBtn");
-// var closeBtn = document.getElementById("closeBtn");
-
-// openBtn.onclick = openNav;
-// closeBtn.onclick = closeNav;
-
-// /* Set the width of the side navigation to 250px */
-// function openNav() {
-//   sidenav.classList.add("active");
-// }
-
-// /* Set the width of the side navigation to 0 */
-// function closeNav() {
-//   sidenav.classList.remove("active");
-// }
 
 
 // Animation pour faire apparaitre le contenu 

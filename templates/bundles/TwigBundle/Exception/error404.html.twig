@@ -4,9 +4,9 @@
 
 {% block body %}
 <div class="main exception">
+<img src="{{ asset('' ~ random_image.displayRandomImages) }}" class="exception_img" alt="">
 <p  class="error_number">404</p>
 <h1>La page recherchée n'a pas été trouvée.</h1>
-
 <a href="{{ path('home') }}"><h1 class="card-purple">Retourner à l'accueil</h1></a>
 </div>
 {% endblock %}

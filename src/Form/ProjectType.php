@@ -42,19 +42,24 @@ class ProjectType extends AbstractType
                 ]
             ])
             ->add('github', UrlType::class, [
-                'label' => 'Url',
+                'label' => 'Url Github',
                 'required' => false,
                 'constraints' => [
                     new Url(),
                 ]
             ])
             ->add('summary', TextType::class, [
-                'label' => 'Name',
+                'label' => 'Summary',
                 'constraints' => [
                     new NotBlank(),
                 ]
             ])
-            ->add('categories')
+            ->add('categories', null, [
+                'label' => 'categories',
+                'required' => true,
+                'multiple' => true,
+                'expanded' => true,
+            ])
         ;
     }
 

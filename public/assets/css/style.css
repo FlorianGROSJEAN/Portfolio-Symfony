@@ -215,27 +215,17 @@ h3 {
     display: none;
 }
 
-.exception {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 /* PROJECT PAGE */
 
 
 .title_page {
-    padding-top: 2rem;
     font-size: xx-large;
-    /* text-align: center; */
-    margin-bottom: 5rem;
-}
-
-.project_name {
+    margin-bottom: 2rem;
     color: rgb(24 226 140);
 }
+
 
 .project {
     display: flex;
@@ -270,7 +260,6 @@ h3 {
 }
 
 .text {
-    /* margin: 1rem 0rem; */
     line-height: 2.5rem;
     white-space: pre-line;
 }
@@ -288,9 +277,25 @@ h3 {
 
 /* ERROR PAGES */
 
+.exception {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .error_number{
-    font-size: 15rem;
+    font-size: 10rem;
     color: rgb(24 226 140);
+}
+
+.exception_img{
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 400px;
+    box-shadow: 5px 5px 6px rgba(94,104,121,0.3);
 }
 
 /* BACK OFFICE  */

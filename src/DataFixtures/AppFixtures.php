@@ -61,11 +61,14 @@ class AppFixtures extends Fixture
 
         $presentation = [
 
-            "Anciennement conseiller de vente, je me suis tourné vers le monde du numérique grâce à une formation de développeur web suite à une reconversion professionnelle.
+            "Anciennement conseiller de vente pendant une douzaine d'années, je me suis tourné vers le monde du numérique grâce à une formation de développeur web suite à une reconversion professionnelle.
             J'ai suivi une formation chez O'clock qui m'a permis d'acquérir de solides bases en html, css, javascript, php. Puis j'ai chois une spécialisation sur le framework Symfony.
-            Aujourd'hui, je suis à la recherche d'opportunités dans ce domaine qui me passionne.
+            Aujourd'hui, je suis à la recherche d'opportunités et de projets dans ce domaine qui me passionne.
+            J'avais déjà essayé de développer un projet il y a des années (sur DreamWeaver) mais c'était pas évident et surtout à cette époque, début des années 2000, on ne trouvait pas autant d'aide et de support en ligne.
+            Ma reconversion m'a permis de renouer avec cette envie de créer.
             Ce qui me plait dans ce domaine c'est la multitude de possibilités offertes pour résoudre une problématique et y apporter une solution afin d'arriver au résultat escompté.
-            J'aime le travail en équipe et je cherche à intégrer une équipe humaine et bienveillante afin de monter en compétences et continuer d'apprendre de nouvelles choses."
+            J'aime le travail en équipe et je cherche à intégrer une équipe humaine et bienveillante afin de monter en compétences et continuer d'apprendre de nouvelles choses.
+            Je suis quelqu'un de très sociable, calme et persévérant et j'ai hâte de travailler ou échanger avec vous."
             
         ];
 

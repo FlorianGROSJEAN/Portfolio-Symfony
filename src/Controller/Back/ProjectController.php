@@ -5,6 +5,7 @@ namespace App\Controller\Back;
 use App\Entity\Project;
 use App\Form\ProjectType;
 use App\Repository\ProjectRepository;
+use App\Service\ImageUploader;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,13 +29,19 @@ class ProjectController extends AbstractController
     /**
      * @Route("/new", name="project_new", methods={"GET", "POST"})
      */
-    public function new(Request $request, ProjectRepository $projectRepository): Response
+    public function new(Request $request, ProjectRepository $projectRepository, ImageUploader $imageUploader): Response
     {
         $project = new Project();
         $form = $this->createForm(ProjectType::class, $project);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $image = $form->get('image')->getData();
+            if ($image != null) {
+                $imageUploader->uploadImage($form);
+            }
+
             $projectRepository->add($project);
             return $this->redirectToRoute('project_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -58,14 +65,19 @@ class ProjectController extends AbstractController
     /**
      * @Route("/{id}/edit", name="project_edit", methods={"GET", "POST"})
      */
-    public function edit(Request $request, Project $project, ProjectRepository $projectRepository): Response
+    public function edit(Request $request, Project $project, ProjectRepository $projectRepository, ImageUploader $imageUploader): Response
     {
         $form = $this->createForm(ProjectType::class, $project);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $image = $form->get('image')->getData();
+            if ($image != null) {
+                $imageUploader->uploadImage($form);
+            }
             $projectRepository->add($project);
-            return $this->redirectToRoute('aproject_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('project_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('back/project/edit.html.twig', [

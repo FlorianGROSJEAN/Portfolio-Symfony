@@ -16,7 +16,7 @@
         
         <div class="project section">
             <div class="project_image">
-            <img class="project_image_img" src="{{  asset(project.image)  }}" alt="">
+            <img class="project_image_img" src="{{  asset('assets/images/' ~ project.image)  }}" alt="">
             </div>
 
             <div class="project_summary text">
@@ -30,12 +30,12 @@
 
         <div class="project_links">
             <div>
-                <a href="{{ project.url }}" class="project_links-items">Lien du site
+                <a href="{{ project.url }}" target="_blank" class="project_links-items">Lien du site
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
             </div>
             <div>
-                <a href="{{ project.github }}" class="project_links-items"> Lien GitHub
+                <a href="{{ project.github }}" target="_blank" class="project_links-items"> Lien GitHub
                 <i class="fa-brands fa-github"></i>
                 </a>
             </div>

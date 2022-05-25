@@ -4,31 +4,25 @@ namespace App\Form;
 
 use App\Entity\Category;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\Constraints\NotBlank;
 
 class CategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name', TextType::class, [
-                'label' => 'Name',
-                'constraints' => [
-                    new NotBlank()
-                ]
-            ])
-            ->add('project', ChoiceType::class, [
-                'label' => 'Projet',
-                'multiple' => true,
-                'expanded' => true,
-            ])
-            ->add('mainCategory', ChoiceType::class, [
-                'label' => 'MainCategory',
-                'multiple' => true,
+            ->add('name')
+            // ->add('project', null, [
+            //     'label' => 'project *',
+            //     'required' => true,
+            //     'multiple' => false,
+            //     'expanded' => true,
+            // ])
+            ->add('mainCategory', null, [
+                'label' => 'mainCategory *',
+                'required' => true,
+                'multiple' => false,
                 'expanded' => true,
             ])
         ;

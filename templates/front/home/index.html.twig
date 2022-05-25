@@ -34,7 +34,7 @@
             </div>
 
             <div class="link-cv">
-                <a download class="cv" href="pdf/CV_Florian_Grosjean.pdf" alt="cv">Télécharger le CV</a>
+                <a download class="cv" href="assets/pdf/CV_Florian_Grosjean.pdf" alt="cv">Télécharger le CV</a>
                 <i class="fa-solid fa-download"></i>
             </div>
 
@@ -82,7 +82,7 @@
                         <a href="{{ path('project' , {id: project.id} ) }}">
                         <div class="display__ima">
                         
-                        <img class="image" src="{{ asset(project.image) }}" alt="">
+                        <img class="image" src="{{ asset('assets/images/' ~ project.image ) }}" alt="">
                         
                         </div>
                         <div class="image__text">
