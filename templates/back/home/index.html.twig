@@ -1,0 +1,27 @@
+{% extends "back/base.html.twig" %}
+
+{% block title %}Back Office!{% endblock %}
+
+{% block body %}
+
+<div class="back_card">
+    <div class="back_card_content">
+    <a href="{{ path('presentation_index') }}" class="content_text">Presentation</a>
+    </div>
+    <div class="back_card_content">
+    <a href="{{ path('project_index') }}" class="content_text">Projets</a>
+    </div>
+    <div class="back_card_content">
+    <a href="{{ path('main_category_index') }}" class="content_text">Catégories Principales</a>
+    </div>
+    <div class="back_card_content">
+    <a href="{{ path('category_index') }}" class="content_text">Catégories</a>
+    </div>
+    <div class="back_card_content">
+    <a href="{{ path('app_back_user_index') }}" class="content_text">Utilisateurs</a>
+    </div>
+</div>
+
+
+
+{% endblock %}

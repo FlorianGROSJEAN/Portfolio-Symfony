@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Portfolio{% endblock %}
+
+{% block body %}
+
+
+    <div class="main">
+
+        <div class="photo">
+            <img class="picture" src="{{ asset("assets/images/PXL_20210701_114541432.PORTRAIT.jpg")}}" alt="Ma photo">
+        </div>
+
+        <div class="title">
+            <h1 class="name">
+                <strong>Florian Grosjean</strong>
+            </h1>
+            <p class="job">Développeur Web</p>
+        </div>
+
+        <div class="link">
+
+            <div class="link-social">
+                <a href="https:/www.linkedin.com/in/floriangrosjean" target="_blank" class="link-social-content linkedin" alt="lien linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/grosjeanfloria1" target="_blank" class="link-social-content twitter" alt="">
+                    <i class="fa-brands fa-twitter-square"></i>
+                </a>
+                <a href="mailto:floriangrosjean@outlook.com" class="link-social-content mail">
+                <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="link-cv">
+                <a download class="cv" href="assets/pdf/CV_Florian_Grosjean.pdf" alt="cv">Télécharger le CV</a>
+                <i class="fa-solid fa-download"></i>
+            </div>
+
+        </div>
+
+        <div class="menu">
+            <div class="menu__button">
+                <div class="button about-me active">
+                    <h2>A propos de moi</h2>  
+                </div>
+
+                <div class="button projects">
+                    <h2>Projets</h2>
+                    
+                </div>
+
+                <div class="button skills"> 
+                    <h2>Skills</h2>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="separator">
+            <hr class="separator_line">
+        </div>
+
+        <div class="display">
+            <div class="display__content">
+                <div class="about-me__content content">
+
+                {% for presentation in presentations %}
+
+                    <p class="about-me__text">{{ presentation.description }}</p>
+
+                {% endfor %}
+
+                </div>
+
+                <div class="projects__content content inactive">
+
+                {% for project in projects %}
+                                
+                    <div class="projects-img">
+                        <a href="{{ path('project' , {id: project.id} ) }}">
+                        <div class="display__ima">
+                        
+                        <img class="image" src="{{ asset('assets/images/' ~ project.image ) }}" alt="">
+                        
+                        </div>
+                        <div class="image__text">
+                            <p class="text">{{project.name}}</p>
+                        </div>
+                        </a>
+                    </div>
+
+                    {% endfor %}
+
+                    
+                </div>
+    
+                <div class="skills__content  content inactive">
+
+                {% for mainCategory in mainCategories %}
+                               
+                    <div class="skills__front">
+                        <h3>{{mainCategory}}</h3>
+                        <ul>
+
+                            {% for category in mainCategory.category %}
+                                
+                            <li><i class="fa-solid fa-circle-chevron-down"></i>{{category}}</li>
+
+                            {% endfor %}
+                            
+                        </ul>
+                    </div>
+
+                {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+{% endblock %}

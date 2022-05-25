@@ -1,0 +1,32 @@
+{% set currentRoute = app.request.get('_route') %}
+
+
+    <div class="navbar">
+        <ul class="navbar_links_desktop">
+          <li><a href="{{ path('back_home') }}" class="{{ currentRoute == 'back_home' ? ' back_active':'' }}">Back Office</a></li>
+          <li><a href="{{ path('home') }}">Front</a></li>
+          <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+        </ul>
+        </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">×</a>
+        <ul class="navbar_links">
+          <li><a href="{{ path('back_home') }}" class="{{ currentRoute == 'back_home' ? ' back_active':'' }}">Back Office</a></li>
+          <li><a href="{{ path('home') }}">Front</a></li>
+          <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+        </ul>
+    </div>
+      
+    <a href="#" id="openBtn">
+      <span class="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </a>
+
+
+  <div class="separator">
+    <hr class="separator_line">
+  </div>
