@@ -17,21 +17,36 @@
                 <strong>Florian Grosjean</strong>
             </h1>
             <p class="job">Développeur Web</p>
+
+            <div id="phone__number"></div>
         </div>
+
 
         <div class="link">
 
+
             <div class="link-social">
-                <a href="https:/www.linkedin.com/in/floriangrosjean" target="_blank" class="link-social-content linkedin" alt="lien linkedin">
+                <a href="https://www.linkedin.com/in/floriangrosjean" target="_blank" class="link-social-content linkedin" alt="lien linkedin">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="https://twitter.com/grosjeanfloria1" target="_blank" class="link-social-content twitter" alt="">
+                <a href="https://twitter.com/grosjeanfloria1" target="_blank" class="link-social-content twitter" alt="lien twitter">
                     <i class="fa-brands fa-twitter-square"></i>
                 </a>
-                <a href="mailto:floriangrosjean@outlook.com" class="link-social-content mail">
+                <a href="mailto:floriangrosjean@outlook.com" class="link-social-content mail" alt="email florian grosjean">
                 <i class="fa-solid fa-envelope"></i>
                 </a>
+                </a>
+                <a href="https://github.com/FlorianGROSJEAN" target="_blank" class="link-social-content github" alt="github florian grosjean">
+                <i class="fa-brands fa-github"></i>
+                </a>
+                </a>
+                <p class="link-social-content phone" alt="phone_number florian grosjean">
+                <i class="fa-solid fa-phone"></i>
+                </p>
+
             </div>
+
+            
 
             <div class="link-cv">
                 <a download class="cv" href="assets/pdf/CV_Florian_Grosjean.pdf" alt="cv">Télécharger le CV</a>
@@ -42,16 +57,16 @@
 
         <div class="menu">
             <div class="menu__button">
-                <div class="button about-me active">
+                <div class="button about-me active" alt="a propos de moi">
                     <h2>A propos de moi</h2>  
                 </div>
 
-                <div class="button projects">
+                <div class="button projects" alt="projets">
                     <h2>Projets</h2>
                     
                 </div>
 
-                <div class="button skills"> 
+                <div class="button skills" alt="compétences"> 
                     <h2>Skills</h2>
                     
                 </div>
@@ -79,17 +94,22 @@
                 {% for project in projects %}
                                 
                     <div class="projects-img">
+
                         <a href="{{ path('project' , {id: project.id} ) }}">
+
                         <div class="display__ima">
                         
-                        <img class="image" src="{{ asset('assets/images/' ~ project.image ) }}" alt="">
-                        
+                            <img class="image" src="{{ asset('assets/images/' ~ project.image ) }}" alt="image du projet">
+
                         </div>
+
                         <div class="image__text">
                             <p class="text">{{project.name}}</p>
                         </div>
                         </a>
                     </div>
+
+                    
 
                     {% endfor %}
 

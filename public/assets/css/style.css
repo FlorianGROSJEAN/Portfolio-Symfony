@@ -1,10 +1,8 @@
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     margin: 0%;
-    
     width: 100%;
     height: 100%;
-
     padding: 2rem;
     background-color: #ecebec;
     color: #787678;
@@ -35,6 +33,10 @@ body {
     max-width: 17rem;
     max-height: 17rem;
 
+}
+
+.title{
+    margin-bottom: 2rem;
 }
 
 .name{
@@ -72,6 +74,25 @@ body {
 .link-social-content:hover {
     transform: scale(1.2);
     color: rgb(24 226 140);
+}
+
+.phone {
+    cursor: pointer;
+    position: relative;
+}
+
+.phoneContent{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(24 226 140);
+    position: absolute;
+}
+
+#phone__number {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
 }
 
 
@@ -145,10 +166,15 @@ body {
     text-align: center;
 }
 
+.about-me__content{
+    display: flex;
+    justify-content: center;
+}
+
 .about-me__text {
-    font-size: medium;
+    max-width: 800px;
     margin-bottom: 10px;
-    line-height: 2.5rem;
+    line-height: 1.7rem;
     white-space:pre-line;
 }
 
@@ -168,21 +194,16 @@ body {
 }
 
 .projects-img:hover {
-    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);  
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);   
 }
 
 .display__ima {
     margin-top: 1rem;
-    position: relative;
 }
 
 .image {
    max-width: 95%;
    border-radius: 15px;
-}
-
-.image__text {
-    margin: 1rem;
 }
 
 .text {
@@ -222,6 +243,7 @@ h3 {
 
 
 .title_page {
+    font-weight: bolder;
     font-size: xx-large;
     margin-bottom: 2rem;
     color: rgb(24 226 140);
@@ -238,7 +260,7 @@ h3 {
 .container {
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
 }
 
 .project_name {
@@ -261,7 +283,7 @@ h3 {
 }
 
 .text {
-    line-height: 2.5rem;
+    line-height: 2rem;
     white-space: pre-line;
 }
 
@@ -271,9 +293,23 @@ h3 {
     gap: 5rem;
 }
 
+.back_home{
+    width: 14rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    transition: .75s;
+    cursor: pointer;
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    margin-bottom: 2rem;
+}
+
 .project_links-items:hover {
     transition: all .3s;
     color: rgb(24 226 140);
+    
 }
 
 /* ERROR PAGES */
@@ -422,3 +458,4 @@ h3 {
     border-radius: 10px;
     box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
 }
+

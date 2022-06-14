@@ -15,7 +15,11 @@ const app = {
 
         // Récupération du bouton "skills"
         let skillsElement = document.querySelector(".skills");
-        skillsElement.addEventListener("click", app.handleClickSkills);    
+        skillsElement.addEventListener("click", app.handleClickSkills); 
+        
+        //Récupération du bouton "phone"
+        let phoneElement = document.querySelector(".phone");
+        phoneElement.addEventListener("click", app.handleClickPhone);
         
     },
 
@@ -85,7 +89,26 @@ const app = {
     closeNav : function(evt) {
         let sidenav = document.getElementById("mySidenav");
         sidenav.classList.remove("active");
-    }
+    },
+
+    handleClickPhone : function(evt) {
+        let divElement = document.getElementById('phoneDiv');
+        if (divElement)
+        {
+            divElement.remove();
+        }
+        else {
+        let newDiv = document.createElement("div");
+        newDiv.id ='phoneDiv';
+        newDiv.className="phoneContent";
+        let phoneContent = document.createTextNode('06 84 73 14 65');
+        newDiv.appendChild(phoneContent);
+
+        let currentDiv = document.getElementById('phone__number');
+        currentDiv.appendChild(newDiv);
+        }
+
+    },
 
 };
 

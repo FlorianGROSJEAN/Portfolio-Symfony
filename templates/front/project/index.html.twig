@@ -7,7 +7,7 @@
 <div class="main">
 
 
-    <h1 class="project title_page">Projet</h1>
+    <h1 class="project title_page">Projet :</h1>
 
     <div class="project container">
         <div class="project project_name">
@@ -20,11 +20,11 @@
             </div>
 
             <div class="project_summary text">
-                <p class="summary_text">{{ project.summary }}</p>
+                <p class="summary_text">{{ project.description }}</p>
             </div>
 
             <div class="project_description text">
-                <p class="description_text">{{ project.description }}</p>
+                <p class="description_text">{{ project.summary }}</p>
             </div>
         </div>
 
@@ -42,7 +42,7 @@
         </div>
 
         <div>
-        <a href="{{ path('home') }}" class="project_links-items">Retour à l'accueil</a>
+        <a href="{{ path('home') }}" class="project_links-items back_home">Retour à l'accueil</a>
         </div>
     
     </div>
