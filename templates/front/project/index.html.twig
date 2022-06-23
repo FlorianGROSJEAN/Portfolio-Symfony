@@ -7,7 +7,7 @@
 <div class="main">
 
 
-    <h1 class="project title_page">Projet :</h1>
+    <h1 class="project title_page">Projet</h1>
 
     <div class="project container">
         <div class="project project_name">
@@ -15,13 +15,16 @@
         </div>
         
         <div class="project section">
+
+             <div class="project_summary text">
+                <p class="summary_text">{{ project.description }}</p>
+            </div>
+
             <div class="project_image">
             <img class="project_image_img" src="{{  asset('assets/images/' ~ project.image)  }}" alt="">
             </div>
 
-            <div class="project_summary text">
-                <p class="summary_text">{{ project.description }}</p>
-            </div>
+            
 
             <div class="project_description text">
                 <p class="description_text">{{ project.summary }}</p>
