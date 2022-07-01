@@ -91,6 +91,8 @@ const app = {
         sidenav.classList.remove("active");
     },
 
+
+    // Crée une div avec le numéro de téléphone
     handleClickPhone : function(evt) {
         let divElement = document.getElementById('phoneDiv');
         if (divElement)

@@ -34,17 +34,6 @@ body {
     max-height: 17rem;
 }
 
-.picture:hover{
-    visibility: hidden;
-    content: 'Bonjour !';
-}
-
-.picture_text{
-    position: absolute;
-    font-size: x-large;
-    top: 64px;
-    z-index: -1;
-}
 
 .title{
     margin-bottom: 2rem;
@@ -141,8 +130,8 @@ body {
     justify-content: space-evenly;
     align-items: center;
     box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
-
 }
+
 
 .button:hover {
     border-radius: 7px;
